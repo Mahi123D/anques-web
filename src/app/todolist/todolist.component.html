@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row m-0">
+    <div class="col-12 p-0">
+      <h1>Todo-List</h1>
+    </div>
+  </div>
+  <div class="row m-0 pb-5">
+    <div class="col-12 p-0 text-right">
+      <button type="button" class="btn btn-primary" (click)="addToDoList()">Add</button>
+    </div>
+  </div>
+  <div class="table-responsive">
+  <table class="table thead-dark table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="1" style="width: 10%;">Id</th>
+        <th scope="1" style="width: 25%;">Name</th>
+        <th scope="1" style="width: 15%;">Contact No</th>
+        <th scope="1" style="width: 35%;">Address</th>
+        <th scope="1" style="width: 15%;">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let l of emplist">
+        <th>{{l.eid}}</th>
+        <th>{{l.name}}</th>
+        <th>{{l.contactno}}</th>
+        <th>{{l.address}}</th>
+        <th>      <button type="button" class="btn btn-success mr-2" (click)="onEdit(l._id)">Edit</button>
+          <button type="button" class="btn btn-danger" (click)="onDelete(l._id)">Delete</button></th>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
